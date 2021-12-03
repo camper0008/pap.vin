@@ -6,7 +6,7 @@ const onSubmit = async (name, date, begin, end) => {
     
     const headers = new Headers({"Content-Type": "application/json"});
     const body = JSON.stringify({ name, date, begin, end });
-    const res = await (await fetch("/add", { 
+    const res = await (await fetch("add", { 
         headers,
         body,
         method: "POST"
