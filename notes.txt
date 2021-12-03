@@ -1,0 +1,6 @@
+pap.vin
+* git clone pap.vin in /var/www
+* copy or move papvin.conf into /etc/nginx/sites-available
+* create link with `ln -s /etc/nginx/sites-available/papvin.conf /etc/nginx/sites-enabled/papvin.conf`
+* start & enable nginx with systemctl
+* start servers with `pm start <file>.js`
