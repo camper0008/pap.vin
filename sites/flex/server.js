@@ -34,7 +34,7 @@ const main = async () => {
     const filename = formatFileFriendly(time);    
     
     await makeCsvDir();
-    await makeCsvFile(filename, 'navn,dato,tjekket ind,tjekket ud');
+    await makeCsvFile(filename, 'navn;dato;tjekket ind;tjekket ud');
     
     const app = express();
     app.use(cors(), express.json());
@@ -45,7 +45,7 @@ const main = async () => {
 
     app.post('/api/add', (req, res) => {
         const { name, date, begin, end } = sanitizeBody(req.body);
-        appendCsvFile(filename, `${name},${date},${begin},${end}`);
+        appendCsvFile(filename, `${name};${date};${begin};${end}`);
         res.status(200).json({
             message: 'added to file'
         })    
