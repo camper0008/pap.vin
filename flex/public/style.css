@@ -1,0 +1,59 @@
+body {
+    background-color: #282828;
+    color: #FAFAFA;
+    font-family: Arial, "sans-serif";
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.25em;
+}
+
+input {
+    border: none;
+    padding: 0.25em;
+    background-color: #141414;
+    color: #FAFAFA;
+    font-size: 1.2rem;
+    font-family: monospace;
+    width: 20em;
+    margin-bottom: 1em;
+}
+
+#form {
+    width: min-content;
+    margin: auto;
+}
+
+button {
+    width: 50%;
+    margin: 0.5rem 25%;
+    border: none;
+    border-radius: 0;
+    font-family: Arial, "sans-serif";
+    background-color: rgb(0, 127, 255);
+    color: #FAFAFA;
+    font-size: 1.2rem;
+    padding: 0.5em;
+}
+
+a {
+    margin-top: 1em;
+    display: block;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+button:active {
+    opacity: 0.4;
+}
