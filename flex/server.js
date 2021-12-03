@@ -28,7 +28,7 @@ const sanitizeBody = (body) => {
     return neobody;
 }
 
-export const flexRouter = async () => {
+const main = async () => {
     
     const time = new Date();
     const filename = formatFileFriendly(time);    
@@ -36,7 +36,7 @@ export const flexRouter = async () => {
     await makeCsvDir();
     await makeCsvFile(filename, "navn,dato,tjekket ind,tjekket ud");
     
-    const app = express.Router();
+    const app = express();
     app.use(cors(), express.json());
 
     app.get("/download", (req, res) => {
@@ -52,4 +52,8 @@ export const flexRouter = async () => {
     })
 
     app.use('/', express.static("./public")); 
+
+    app.listen(8000);
 }
+
+main();
